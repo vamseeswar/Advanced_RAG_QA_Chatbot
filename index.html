@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHATBOT | Multimodal AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">R</div>
+                <h1>RAG MASTER</h1>
+            </div>
+
+            <div class="upload-section">
+                <h3>Knowledge Base</h3>
+                <p>PDF, DOCX, PPTX, XLSX, CSV, HTML, TXT, Image</p>
+                <div class="drop-zone" id="drop-zone">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Drop files here or click</span>
+                    <input type="file" id="file-input" multiple hidden
+                        accept=".pdf,.docx,.doc,.pptx,.ppt,.xlsx,.xls,.csv,.html,.txt,.py,.js,.css,.md,.json,image/*">
+                </div>
+                <div class="file-list" id="file-list"></div>
+            </div>
+
+            <!-- Chat History Section -->
+            <div class="history-section">
+                <h4 class="history-heading"><i class="fas fa-history"></i> Recent Chats</h4>
+                <div id="history-list">
+                    <!-- History items will be injected here -->
+                </div>
+            </div>
+
+            <div class="user-profile" id="user-profile" style="display: none;">
+                <div class="u-avatar" id="user-initials">JD</div>
+                <div class="u-info">
+                    <div class="u-name" id="display-name">John Doe</div>
+                </div>
+                <div class="logout-btn" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+            </div>
+
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span id="status-text">System Ready</span>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <div class="header-info">
+                    <h2>RAG QA CHATBOT</h2>
+                    <p>Document Analysis</p>
+                </div>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="clear-chat" title="Clear Chat">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="messages-container" id="chat-messages">
+                <div class="message ai-message">
+                    <div class="avatar">AI</div>
+                    <div class="content">
+                        Hello! I'm your advanced RAG assistant. I support **all major file types**:
+                        
+                        Upload to the **Knowledge Base** on the left to start analyzing!
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div id="image-preview" style="display: none;"></div>
+                <div class="modern-input-container">
+                    <form id="chat-form">
+                        <textarea id="user-input" placeholder="Ask anything, @ to mention, / for workflows"
+                            rows="1"></textarea>
+                        <div class="input-footer">
+                            <div class="footer-left">
+                                <button type="button" class="action-btn" id="primary-upload-btn"
+                                    title="Upload Media/Files">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+
+                            </div>
+                            <div class="footer-right">
+                                <button type="submit" id="send-btn" class="circle-send">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <input type="file" id="chat-file-input"
+                            accept=".pdf,.docx,.doc,.pptx,.ppt,.xlsx,.xls,.csv,.html,.txt,.py,.js,.css,.md,.json,image/*"
+                            hidden>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
