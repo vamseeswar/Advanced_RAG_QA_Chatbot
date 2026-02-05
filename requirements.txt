@@ -14,7 +14,7 @@ openpyxl
 python-pptx
 pandas
 unstructured[all-docs]
-python-magic-bin
+python-magic
 openai-whisper
 moviepy
 opencv-python
