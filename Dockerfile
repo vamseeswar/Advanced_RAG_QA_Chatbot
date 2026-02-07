@@ -3,7 +3,7 @@ FROM python:3.11-slim
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \
-    PORT=8080
+    PORT=7860
 
 # Install system dependencies (needed for PDF processing and OpenCV)
 RUN apt-get update && apt-get install -y \
@@ -27,7 +27,7 @@ COPY . .
 RUN mkdir -p uploads && chmod 777 uploads
 
 # Expose the port
-EXPOSE 8080
+EXPOSE 7860
 
 # Start command
 CMD uvicorn app:app --host 0.0.0.0 --port $PORT
