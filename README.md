@@ -1,3 +1,12 @@
+---
+title: Advanced RAG QA Chatbot
+emoji: 🧠
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
 # Nexara RAG Chatbot
 
 An advanced Retrieval-Augmented Generation (RAG) chatbot built with:
