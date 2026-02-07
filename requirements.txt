@@ -16,7 +16,7 @@ pandas
 unstructured[all-docs]
 python-magic
 openai-whisper
-moviepy
+moviepy==1.0.3
 opencv-python
 pillow
 torch
