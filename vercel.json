@@ -1,0 +1,53 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "app.py",
+            "use": "@vercel/python"
+        },
+        {
+            "src": "index.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "style.css",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "script.js",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/uploads/(.*)",
+            "dest": "/api/index.py"
+        },
+        {
+            "src": "/chat",
+            "methods": [
+                "POST"
+            ],
+            "dest": "app.py"
+        },
+        {
+            "src": "/upload",
+            "methods": [
+                "POST"
+            ],
+            "dest": "app.py"
+        },
+        {
+            "src": "/clear",
+            "dest": "app.py"
+        },
+        {
+            "src": "/health",
+            "dest": "app.py"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/$1"
+        }
+    ]
+}

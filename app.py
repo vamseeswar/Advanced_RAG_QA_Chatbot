@@ -24,7 +24,8 @@ app.add_middleware(
 )
 
 
-UPLOAD_DIR = "uploads"
+# Handle Vercel's read-only filesystem by using /tmp
+UPLOAD_DIR = "/tmp/uploads" if os.name != 'nt' else "uploads"
 if not os.path.exists(UPLOAD_DIR):
     os.makedirs(UPLOAD_DIR)
 
