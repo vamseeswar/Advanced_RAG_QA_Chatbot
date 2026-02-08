@@ -13,10 +13,10 @@ python-docx
 openpyxl
 python-pptx
 pandas
-unstructured[all-docs]
+unstructured
 python-magic
 openai-whisper
-moviepy==1.0.3
+moviepy
 opencv-python
 pillow
 torch
