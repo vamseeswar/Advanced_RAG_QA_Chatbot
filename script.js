@@ -6,7 +6,7 @@ const dropZone = document.getElementById('drop-zone');
 const fileInput = document.getElementById('file-input');
 const fileList = document.getElementById('file-list');
 const statusText = document.getElementById('status-text');
-const clearChatBtn = document.getElementById('clear-chat');
+
 const themeToggle = document.getElementById('theme-toggle');
 const chatFileInput = document.getElementById('chat-file-input');
 const historyList = document.getElementById('history-list');
@@ -323,18 +323,7 @@ function copyText(text, button) {
     });
 }
 
-clearChatBtn.addEventListener('click', async () => {
-    chatMessages.innerHTML = '';
-    try {
-        await fetch(`${API_BASE_URL}/clear`);
-        statusText.innerText = 'Knowledge Cleared';
-        fileList.innerHTML = '';
-        setTimeout(() => statusText.innerText = 'System Ready', 2000);
-    } catch (e) {
-        console.error("Failed to clear backend:", e);
-    }
-    addMessage("Hello! I'm your advanced RAG assistant. Upload your documents to begin.", 'ai');
-});
+
 
 // Initialize
 initTheme();

@@ -279,20 +279,7 @@ body {
     transition: all 0.3s;
 }
 
-#clear-chat {
-    background: none;
-    border: 1px solid var(--glass-border);
-    color: var(--text-secondary);
-    padding: 0.5rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
 
-#clear-chat:hover {
-    color: #ef4444;
-    border-color: #ef4444;
-}
 
 .messages-container {
     flex: 1;
